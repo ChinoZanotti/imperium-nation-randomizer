@@ -1,20 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import card0 from './assets/card-0.jpg'
+import Navbar from './Navbar'
 import './App.css'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
       <div className='grid-container'>
-        <div>FILL</div>
-        <div>--------------CARTA-------------</div>
-        <div>FILL</div>
-        <div>FILL</div>
-        <div>MENU</div>
-        <div>FILL</div>
+        <div></div>
+        <div id='card-display'>
+          <img id='cardOnTable' className='' src={ card0 } />
+        </div>
+        <div></div>
+        <div></div>
+        <Navbar />
+        <div></div>
       </div>
     </>
   )

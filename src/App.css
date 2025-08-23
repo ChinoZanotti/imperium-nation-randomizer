@@ -6,8 +6,23 @@
 	gap: 10px;
 }
 
-.grid-container div {
-  background-color: red;
-  color: #fff;
-  text-align: center;
+/*** CARD DISPLAY ***/
+
+#card-display {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+#card-display img {
+	height: 70vh;
+	border-radius: 20px;
+  	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#card-display img.empty {
+	opacity: .2;
+	box-shadow: none;
+	border: 2px solid #000;
 }
