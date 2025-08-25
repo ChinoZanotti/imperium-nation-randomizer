@@ -6,7 +6,7 @@
 
 .nav-bottom ul {
 	width: 100%;
-	background-color: #f3f3f3;
+	background-color: #383d40;
 	display: flex;
 	gap: 30px;
 	list-style: none;
@@ -18,9 +18,10 @@
 
 .nav-bottom ul svg {
 	height: 30px;
+	fill: #a2d2e7;
 }
 
 .nav-divider {
-	border-left: 1px solid #fff;
-	border-right: 1px solid rgba(0, 0, 0, 0.2);
+	border-left: 1px solid #ffffff12;
+	border-right: 1px solid rgba(0, 0, 0, 0.118);
 }

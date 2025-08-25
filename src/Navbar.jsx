@@ -8,20 +8,14 @@ function Navbar() {
             <li>
               <a href='#' id='drawBtn' className='icon-link'>
                 <svg 
-                  width="50" 
-                  height="50" 
-                  viewBox="0 0 50 50" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect 
-                    width="50" 
-                    height="50" 
-                    fill="white"
-                  />
+                  xmlns="http://www.w3.org/2000/svg" 
+                  height="30px" 
+                  viewBox="0 -960 960 960" 
+                  width="30px" 
+                  fill="#e3e3e3">
                   <path 
-                    d="M25.4856 8L44.9711 41.75H6L25.4856 8Z" 
-                    fill="black"
-                  />
+                    d="M280-160v-80h400v80H280Zm160-160v-327L336-544l-56-56 200-200 
+                    200 200-56 56-104-103v327h-80Z"/>
                 </svg>
               </a>
             </li>
@@ -29,20 +23,12 @@ function Navbar() {
             <li>
               <a href='#' id='shuffleResetBtn'>
                 <svg 
-                  width="50" 
-                  height="50" 
-                  viewBox="0 0 50 50" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect 
-                    width="50" 
-                    height="50" 
-                    fill="white"
-                  />
-                  <path 
-                    d="M25.4856 8L44.9711 41.75H6L25.4856 8Z" 
-                    fill="black"
-                  />
+                  xmlns="http://www.w3.org/2000/svg" 
+                  height="30px" 
+                  viewBox="0 -960 960 960" 
+                  width="30px" 
+                  fill="#e3e3e3">
+                  <path d="M560-160v-80h104L537-367l57-57 126 126v-102h80v240H560Zm-344 0-56-56 504-504H560v-80h240v240h-80v-104L216-160Zm151-377L160-744l56-56 207 207-56 56Z"/>
                 </svg>
               </a>
             </li>
