@@ -1,0 +1,25 @@
+#card-display {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-end;
+    background-image: linear-gradient(to right, #00000075, #ffffff75 3%, #ffffff00 6%, #ffffff75 94%, #00000075 97%), repeating-linear-gradient(#8a858b, #9d9ca6 .1%);
+    border-radius: 18px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
+
+#card-display img {
+	height: 70vh;
+	border-radius: 20px;
+  	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 10%;
+}
+
+#card-display img.empty {
+	opacity: .2;
+	box-shadow: none;
+	border: 2px solid #000;
+    margin-bottom: 0;
+}
