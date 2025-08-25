@@ -1,12 +1,12 @@
 import React from "react";
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({click}) => {
     return (
         <div className='nav-bottom'>
           <ul>
             <li>
-              <a href='#' id='drawBtn' className='icon-link'>
+              <a href='#' id='drawBtn' className='icon-link' onClick={click}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   height="30px" 
@@ -21,7 +21,7 @@ const Navbar = () => {
             </li>
             <li className='nav-divider'></li>
             <li>
-              <a href='#' id='shuffleResetBtn'>
+              <a href='#' id='shuffleResetBtn'  onClick={click}>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   height="30px" 

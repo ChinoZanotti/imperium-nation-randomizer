@@ -1,22 +1,37 @@
-import { useState } from 'react'
-import card0 from './assets/card-0.jpg'
+import { Component, useState } from 'react'
 import Navbar from './Navbar'
-import Deck from './Deck'
+import Card from './Card'
+import { reset, draw, shuffle } from './Deck'
+import card0 from './assets/card-0.jpg'
 import './App.css'
 
-const App = () =>{
-  return (
-    <>
-       <div className='grid-container'>
-         <div></div>
-         <Deck />
-         <div></div>
-         <div></div>
-         <Navbar />
-         <div></div>
-       </div>
-     </>
-  );
+class App extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      cardImg: card0
+    }
+  }
+
+  onClick(event) {
+    console.log(`Hola!`);
+  }
+
+  render() {
+    return (
+      <>
+        <div className='grid-container'>
+          <div></div>
+          <Card cardImg={ this.state.cardImg } />
+          <div></div>
+          <div></div>
+          <Navbar click={this.onClick}/>
+          <div></div>
+        </div>
+      </>
+    );
+  }
 }
 
 export default App
