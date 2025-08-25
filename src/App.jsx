@@ -4,19 +4,19 @@ import Navbar from './Navbar'
 import Deck from './Deck'
 import './App.css'
 
-function App() {
+const App = () =>{
   return (
     <>
-      <div className='grid-container'>
-        <div></div>
-        <Deck />
-        <div></div>
-        <div></div>
-        <Navbar />
-        <div></div>
-      </div>
-    </>
-  )
+       <div className='grid-container'>
+         <div></div>
+         <Deck />
+         <div></div>
+         <div></div>
+         <Navbar />
+         <div></div>
+       </div>
+     </>
+  );
 }
 
 export default App
