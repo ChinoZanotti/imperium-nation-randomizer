@@ -1,4 +1,4 @@
-# 🏛️ Imperium: Horizons Nation Picker
+# 🏛️ Imperium: Horizons - Nation Picker
 
 A small **React** application that randomly selects a nation from all the available options in the board game **Imperium: Horizons**.  
 
