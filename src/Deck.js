@@ -4,11 +4,13 @@ const suits = ["a"];
 // Define the values for each suit (from 01 to 14, formatted with leading zeros)
 const values = Array.from({ length: 14 }, (_, i) => String(i + 1).padStart(2, "0"));
 
+const BASE = import.meta.env.BASE_URL;
+
 export const Deck = [];
 
 for (let suit of suits) {
   for (let value of values) {
-    Deck.push(`/cards/card-${suit}-${value}.jpg`);
+    Deck.push(`${BASE}./cards/card-${suit}-${value}.jpg`);
   }
 }
 
