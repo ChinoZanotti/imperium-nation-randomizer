@@ -1,4 +1,4 @@
-import { Component, useState } from 'react'
+import { useState, useCallback } from 'react'
 import Navbar from './Navbar'
 import Card from './Card'
 import card0 from './assets/card-0.jpg'
@@ -6,50 +6,44 @@ import cardEmpty from './assets/card-empty.jpg'
 import './App.css'
 import { Deck, shuffleDeck } from './Deck.js'
 
-class App extends Component {
+function App() {
+  const [cardImg, setCardImg] = useState(card0);
+  const [deck, setDeck] = useState(() => shuffleDeck(Deck));
+  const [cardClassName, setCardClassName] = useState('');
 
-  constructor() {
-    super()
-    this.state = {
-      cardImg: card0,
-      deck: shuffleDeck(Deck),
-      cardClassName: ''
-    }
-  }
+  const shufBtn = useCallback(() => {
+    setDeck(() => shuffleDeck(Deck));
+    setCardImg(card0);
+    setCardClassName('');
+  }, []);
 
-  shufBtn = () => {
-    this.setState({ 
-      deck: shuffleDeck(Deck),
-      cardImg: card0,
-      cardClassName: ''
-    })
-  }
-
-  drawBtn = () => {
-    this.setState(prev => {
-      if (prev.deck.length === 0) {
-        return { cardImg: cardEmpty, cardClassName: 'empty' };
+  const drawBtn = useCallback(() => {
+    setDeck(prev => {
+      if (prev.length === 0) {
+        setCardImg(cardEmpty);
+        setCardClassName('empty');
+        return prev;
       }
-      const deck = prev.deck.slice();
-      const cardImg = deck.pop();
-      return { deck, cardImg };
+      const nextDeck = prev.slice(0, -1);
+      const nextCard = prev[prev.length - 1];
+      setCardImg(nextCard);
+      setCardClassName('');
+      return nextDeck;
     });
-  };
+  }, []);
 
-  render() {
-    return (
-      <>
-        <div className='grid-container'>
-          <div></div>
-          <Card cardImg={ this.state.cardImg } cardClassName={ this.state.cardClassName } />
-          <div></div>
-          <div></div>
-          <Navbar shuffle={this.shufBtn} draw={this.drawBtn} />
-          <div></div>
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <div className='grid-container'>
+        <div></div>
+        <Card cardImg={cardImg} cardClassName={cardClassName} />
+        <div></div>
+        <div></div>
+        <Navbar shuffle={shufBtn} draw={drawBtn} />
+        <div></div>
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
